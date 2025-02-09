@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negocios Digitales</title>
+    
+    <!-- Enlace al archivo de estilos -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        /* Estilos para centrar el cuadro de inicio de sesión */
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h2 {
+            color: #033773; /* Azul oscuro para el título */
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333; /* Gris oscuro para las etiquetas */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 16px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #033773; /* Azul oscuro para el botón */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #022859; /* Azul más oscuro al pasar el mouse */
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html">
+                <img src="imagenes/logond.png" alt="Logo de la carrera">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <!-- Ícono de cierre de menú -->
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html" id="inicio-link">Inicio</a></li>
+                    <li><a href="Docentes.html" id="docentes-link">Docentes</a></li>
+                    <li><a href="Materias.html" id="materias-link">Materias</a></li>
+                    <li><a href="Eventos.html" id="eventos-link">Eventos</a></li>
+                    <li><a href="Galeria.html" id="galeria-link">Galería</a></li>
+                    <li><a href="Administrador.html" id="administrador-link">Administrador</a></li>
+                </ul>
+            </div>
+            <!-- Ícono de menú hamburguesa -->
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </section>
+
+    <!-- Cuadro de inicio de sesión centrado -->
+    <div class="login-container">
+        <h2>Iniciar sesión - Administrador</h2>
+        <form action="procesar_login.php" method="post">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+
+            <!-- Este es el único botón que debe permanecer -->
+            <button type="submit">Iniciar sesión</button>
+
+            <div class="error-message">
+                <?php
+                    // Aquí puedes mostrar mensajes de error si es necesario
+                    if (isset($_GET['error'])) {
+                        echo $_GET['error'];
+                    }
+                ?>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fa fa-map-marker-alt"></i> Dirección: Quito, Ecuador</p>
+                <p><i class="fa fa-phone"></i> Teléfono: +593 987 654 321</p>
+                <p><i class="fa fa-envelope"></i> Correo: info@negociosdigitales.com</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <a href="https://www.instagram.com/negociosdigitales.uio/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@negociosdigitales.ups" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Creado por</h3>
+                <p>Valeria Castillo, Stiven Chicaiza, Julio Ochoa, Ian Dueñas y Samantha Tituaña</p>
+                <p>Derechos Reservados &copy; 2025</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

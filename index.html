@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negocios Digitales</title>
+    
+    <!-- Enlace al archivo de estilos -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html">
+                <img src="imagenes/logond.png" alt="Logo de la carrera">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <!-- Ícono de cierre de menú -->
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html" id="inicio-link">Inicio</a></li>
+                    <li><a href="Docentes.html" id="docentes-link">Docentes</a></li>
+                    <li><a href="Materias.html" id="materias-link">Materias</a></li>
+                    <li><a href="Eventos.html" id="eventos-link">Eventos</a></li>
+                    <li><a href="Galeria.html" id="galeria-link">Galería</a></li>
+                    <li><a href="Administrador.html" id="administrador-link">Administrador</a></li>
+                </ul>
+            </div>
+            <!-- Ícono de menú hamburguesa -->
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1 id="titulo-header">NEGOCIOS DIGITALES</h1>
+            <h3 id="descripcion-header">Donde la creatividad se encuentra con la tecnología.</h3>
+            <button id="editar-btn">Modificar</button>
+            <button id="guardar-btn" style="display: none;">Guardar</button>
+        </div>
+    </section>
+
+    <!-- Sección "Qué ofrecemos?" -->
+    <section class="course">
+        <h1>Descubre más sobre nuestra carrera</h1>
+    </section>
+
+    <!-- Carrusel 1 (Docentes) -->
+    <div class="carousel-section">
+        <div class="carousel-container">
+            <button class="prev" onclick="moveSlide(0, -1)"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel" id="carousel-0">
+                <div class="slide"><img src="imagenes/Docentes/docentes1.png" alt="Imagen 1"></div>
+                <div class="slide"><img src="imagenes/Docentes/docentes2.png" alt="Imagen 2"></div>
+                <div class="slide"><img src="imagenes/Docentes/docentes3.png" alt="Imagen 3"></div>
+            </div>
+            <button class="next" onclick="moveSlide(0, 1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="text-container">
+            <h2 id="titulo-docentes">DOCENTES</h2>
+            <p id="descripcion-docentes">Nuestros docentes, expertos en negocios digitales, están comprometidos con tu formación para que lideres el futuro digital. Con su experiencia, te prepararán para transformar el mundo digital.</p>
+            <a link rel="stylesheet" href="docentes.html" class="btn">Descubre Más</a>
+        </div>
+    </div>
+
+    <!-- Carrusel 2 (Asignaturas) -->
+    <div class="carousel-section reverse">
+        <div class="text-container">
+            <h2 id="titulo-asignaturas">ASIGNATURAS</h2>
+            <p id="descripcion-asignaturas">Explora nuestras asignaturas diseñadas para brindarte los conocimientos más relevantes en el mundo de los negocios digitales. Prepárate con las herramientas y habilidades necesarias para destacar en el entorno digital.</p>
+            <a href="#" class="btn">Descubre Más</a>
+        </div>
+        <div class="carousel-container">
+            <button class="prev" onclick="moveSlide(1, -1)"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel" id="carousel-1">
+                <div class="slide"><img src="imagenes/Asignaturas/tips-universitarios.png" alt="Imagen 4"></div>
+                <div class="slide"><img src="imagenes/Asignaturas/asig2.png" alt="Imagen 5"></div>
+                <div class="slide"><img src="imagenes/Asignaturas/asig3.jpeg" alt="Imagen 6"></div>
+            </div>
+            <button class="next" onclick="moveSlide(1, 1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Carrusel 3 (Eventos) -->
+    <div class="carousel-section">
+        <div class="carousel-container">
+            <button class="prev" onclick="moveSlide(2, -1)"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel" id="carousel-2">
+                <div class="slide"><img src="imagenes/eventos/evento1.jpeg" alt="Imagen 7"></div>
+                <div class="slide"><img src="imagenes/eventos/evento2.jpeg" alt="Imagen 8"></div>
+                <div class="slide"><img src="imagenes/eventos/evento3.jpeg" alt="Imagen 9"></div>
+            </div>
+            <button class="next" onclick="moveSlide(2, 1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="text-container">
+            <h2 id="titulo-eventos">EVENTOS</h2>
+            <p id="descripcion-eventos">Mantente al tanto de nuestros eventos, conferencias y actividades que te conectan con el futuro de los negocios digitales. Aprende de los expertos y amplía tus horizontes.</p>
+            <a link rel="stylesheet" href="docentes.html" class="btn">Descubre Más</a>
+        </div>
+    </div>
+
+    <!-- Carrusel 4 (Galería) -->
+    <div class="carousel-section reverse">
+        <div class="text-container">
+            <h2 id="titulo-galeria">GALERÍA</h2>
+            <p id="descripcion-galeria">Descubre nuestra galería, donde capturamos los momentos más destacados de la carrera de negocios digitales. Un vistazo visual a nuestro impacto y la innovación que nos mueve.</p>
+            <a link rel="stylesheet" href="docentes.html" class="btn">Descubre Más</a>
+        </div>
+        <div class="carousel-container">
+            <button class="prev" onclick="moveSlide(3, -1)"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel" id="carousel-3">
+                <div class="slide"><img src="imagenes/galeria/Captura de pantalla 2025-02-01 212216.png" alt="Imagen 10"></div>
+                <div class="slide"><img src="imagenes/galeria/galeria2.png" alt="Imagen 11"></div>
+                <div class="slide"><img src="imagenes/galeria/galeria3.png" alt="Imagen 12"></div>
+            </div>
+            <button class="next" onclick="moveSlide(3, 1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fa fa-map-marker-alt"></i> Dirección: Universidad Politécnica Salesiana</p>
+                <p><i class="fa fa-phone"></i> Teléfono: +593 987 654 321</p>
+                <p><i class="fa fa-envelope"></i> Correo: info@negociosdigitales.com</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <a href="https://www.instagram.com/negociosdigitales.uio/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@negociosdigitales.ups" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Creado por</h3>
+                <p>Valeria Castillo, Stiven Chicaiza, Julio Ochoa, Ian Dueñas y Samantha Tituaña</p>
+                <p>Derechos Reservados &copy; 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript para el menú -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+    <!-- Script para controlar los carruseles -->
+    <script>
+        function moveSlide(index, step) {
+            const carousel = document.getElementById(`carousel-${index}`);
+            const slides = carousel.children.length;
+            let currentIndex = carousel.dataset.index ? parseInt(carousel.dataset.index) : 0;
+
+            currentIndex += step;
+            if (currentIndex < 0) {
+                currentIndex = slides - 1;
+            } else if (currentIndex >= slides) {
+                currentIndex = 0;
+            }
+
+            carousel.dataset.index = currentIndex;
+            const offset = -currentIndex * 100;
+            carousel.style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+
+    <!-- Script para editar y guardar contenido -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const editarBtn = document.getElementById("editar-btn");
+            const guardarBtn = document.getElementById("guardar-btn");
+
+            // Elementos editables
+            const elementosEditables = [
+                { id: "titulo-header", seccion: "header", tipo: "titulo" },
+                { id: "descripcion-header", seccion: "header", tipo: "descripcion" },
+                { id: "titulo-docentes", seccion: "docentes", tipo: "titulo" },
+                { id: "descripcion-docentes", seccion: "docentes", tipo: "descripcion" },
+                { id: "titulo-asignaturas", seccion: "asignaturas", tipo: "titulo" },
+                { id: "descripcion-asignaturas", seccion: "asignaturas", tipo: "descripcion" },
+                { id: "titulo-eventos", seccion: "eventos", tipo: "titulo" },
+                { id: "descripcion-eventos", seccion: "eventos", tipo: "descripcion" },
+                { id: "titulo-galeria", seccion: "galeria", tipo: "titulo" },
+                { id: "descripcion-galeria", seccion: "galeria", tipo: "descripcion" }
+            ];
+
+            // Cargar datos desde MySQL
+            fetch("get_content.php")
+                .then(response => response.json())
+                .then(data => {
+                    elementosEditables.forEach(elemento => {
+                        const contenido = data[elemento.seccion];
+                        if (contenido) {
+                            document.getElementById(elemento.id).textContent = contenido[elemento.tipo];
+                        }
+                    });
+                })
+                .catch(error => console.error("Error cargando contenido:", error));
+
+            editarBtn.addEventListener("click", function () {
+                elementosEditables.forEach(elemento => {
+                    const elementoDOM = document.getElementById(elemento.id);
+                    elementoDOM.contentEditable = true;
+                    elementoDOM.style.border = "1px solid red";
+                });
+                editarBtn.style.display = "none";
+                guardarBtn.style.display = "inline";
+            });
+
+            guardarBtn.addEventListener("click", function () {
+                const cambios = elementosEditables.map(elemento => {
+                    const elementoDOM = document.getElementById(elemento.id);
+                    return {
+                        seccion: elemento.seccion,
+                        tipo: elemento.tipo,
+                        valor: elementoDOM.textContent
+                    };
+                });
+
+                fetch("update_content.php", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(cambios)
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.mensaje) {
+                            alert(data.mensaje);
+                        } else if (data.error) {
+                            alert(data.error);
+                        }
+                        elementosEditables.forEach(elemento => {
+                            const elementoDOM = document.getElementById(elemento.id);
+                            elementoDOM.contentEditable = false;
+                            elementoDOM.style.border = "none";
+                        });
+                        editarBtn.style.display = "inline";
+                        guardarBtn.style.display = "none";
+                    })
+                    .catch(error => console.error("Error guardando contenido:", error));
+            });
+        });
+    </script>
+</body>
+</html>

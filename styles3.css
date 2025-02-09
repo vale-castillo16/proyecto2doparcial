@@ -1,0 +1,25 @@
+#calendario {
+    width: 300px;
+    border-collapse: collapse;
+}
+
+#calendario th, #calendario td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#calendario .evento {
+    background-color: yellow;
+}
+
+#evento-info {
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#evento-imagen {
+    max-width: 100%;
+}   
